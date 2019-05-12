@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+      <!--Overview Information-->
+      <article class="post">
+        <h1 class = "subheaders">Overview</h1>
+
+           <p>Over the last 10 years we have been striving to give readers; what they need. We have reviews for various books from
+              thousands of users. This is the place where you can come get reviews, interact with users who have the same interests,
+              get links to various books, explore what's trending in literature right now and discover new authors. </p>
+            <p>Feel free to sign up and get be able to keep track of your books. You can also review your own.</p>
+            <p>To all the bibliophiles out there. This is the site to indulge your book adventures.</p>
+            <p></p>
+            <p>The Awesomeness Star: The Awesomeness Star is much coveted by the books.
+               Look for this icon to the best books from any category.</p><img src="../assets/images/StarLogo.png" alt="star_logo" />
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+  </div>
+
+</body>

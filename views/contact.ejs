@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+
+      <!--Overview Information-->
+      <article class="post">
+        <h1 class = "subheaders">Contact</h1>
+           <p>Please reach out to us to know interesting facts about this website. </p>
+            <p class="con_info"> #  contact_someone@aob.com</p>
+            <p>For any doubts and queries:</p>
+            <p class="con_info"> # Phone: 1234567890</p>
+            <p class="con_info"> # Mail: abcdef@aob.com</p>
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>

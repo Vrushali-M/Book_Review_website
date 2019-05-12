@@ -1,0 +1,458 @@
+@@charset "UTF-8";
+
+body, html, h1, h2,h3, ul, li, a, p,article, aside, footer, header, main, nav, section  {
+padding: 0;
+margin: 0;
+
+
+}
+
+article, aside, footer, header, main, nav, section{
+  display: block;
+}
+
+/*COMMON ELEMENTS*/
+
+/*Main Body information*/
+body{
+  background-repeat:no-repeat;
+  background-size: cover;
+  backface-visibility: visible;
+  background-image: url("../images/typewriter_2.jpg");
+  font-family: cursive;
+  font-size: 15px;
+
+}
+
+.div_element{
+  width: 1230px;
+  margin: 20px auto 20px auto;
+  background-color: #white;
+  padding: 10px 10px;
+  bottom:0;
+  height: auto;
+  overflow: hidden;
+  min-height: 100%;
+  }
+
+
+/*Heading information*/
+.top_heading{
+
+  width: 1200px;
+  margin: 10px auto 20px auto;
+	border: 2px solid #000000;
+	background-color: #2F4F4F;
+  border-radius: 25px;
+  padding: 10px 10px;
+  color: Bisque;
+  font-style: normal;
+  text-align:center;
+  font-family:serif;
+}
+
+.top_heading img {
+  float: left;
+  margin: 10px auto 10px auto;
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px;
+}
+
+.sign_in_status {
+  text-align: right;
+  margin: 10px auto 10px auto;
+  padding: 10px 10px;
+  text-decoration: underline;
+}
+
+/*Navigation Bar information*/
+.nav_bar{
+  width: 1200px;
+  margin: 0px auto 20px auto;
+	border: 2px solid #000000;
+  background-color: #2F4F4F;
+  border-radius: 25px;
+  padding: 10px 10px;
+  color: white;
+}
+
+.nav_bar a{
+  color: Bisque;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+/*Side Bar information*/
+.side_bar{
+  width: 230px;
+  height: 100%;
+  margin: 10px auto 10px 0px;
+	border: 2px solid #000000;
+  position: absolute;
+  background-color: OldLace;
+  border-radius: 25px;
+  padding-top: : 30px;
+  color: Teal;
+  display: block;
+  float: left;
+  height: auto;
+  text-align: left;
+  font-size: 50px;
+
+}
+
+
+.menu_list{
+  color: Teal;
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  text-align: left;
+}
+
+.menu_list li{
+  padding: 0px;
+  margin: 20px 20px;
+}
+
+.menu_list a{
+  font-size: 20px;
+  padding: 20px;
+  color: Teal;
+  text-decoration: none;
+  margin: 20px 20px;
+  align: left;
+}
+
+/*Footer Information*/
+.page_bottom{
+  position:relative;
+    /* Height of the footer */
+  margin: 700px auto 20px auto;
+  border: 2px solid #000000;
+  padding: 10px 10px;
+  border-radius: 25px;
+  background-color: #2F4F4F;
+  //padding: 10px 10px;
+  color: Bisque;
+  clear:both;
+}
+
+/*Main Content Information*/
+.post{
+  width: 940px;
+  margin: 10px auto 10px auto;
+	border: 2px solid #000000;
+  background-color: OldLace;
+  border-radius: 25px;
+  padding: 10px 10px;
+  color: Teal;
+  float: right;
+  height: auto;
+  font-size: 20px;
+
+
+}
+
+
+
+
+
+
+a{
+
+  padding:20px;
+  margin: 20px;
+  font-size: 35px;
+}
+
+.sign_in{
+  float: right;
+  padding-right: 10px;
+  margin-right: 10px;
+
+}
+
+
+.subheaders{
+  text-align: center;
+}
+
+
+.post img{
+  float: left;
+  margin: 10px auto 10px auto;
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px;
+}
+
+
+.post a{
+  color: Teal;
+  font-size: 15px;
+  text-align: left;
+}
+
+.review{
+  width: 940px;
+  margin: 10px auto 10px auto;
+  border: 2px solid #000000;
+  background-color: OldLace;
+  border-radius: 25px;
+  color: Teal;
+  float: right;
+  height: auto;
+  font-size: 20px;
+  padding-left: 20px;
+  font-size: 30px;
+  text-align: left;
+
+
+
+}
+
+.review img{
+  width: 150px;
+  height: 200px;
+  padding-left: 20px;
+  vertical-align: middle;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.trial{
+  display: inline-block;
+}
+.review a{
+  padding: 10px;
+  color: Bisque;
+  background-color: Teal;
+  text-decoration: none;
+  align: left;
+  margin-left: 10px;
+  font-size: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: left;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+}
+
+.review span{
+  padding-left: 10px;
+  display: inline;
+  height: 45px;
+}
+
+.review {
+  padding-left: 10px;
+}
+
+.review p{
+  font-size: 15px;
+    text-align: left;
+}
+
+
+.book_names_img img{
+  float: left;
+  margin: 10px auto 10px auto;
+  width: 50px;
+  height: 100px;
+  padding: 10px 10px;
+}
+
+
+.book_names span{
+padding-left: 10px;
+height: 25px;
+
+}
+.book_names a{
+font-size: 15px;
+text-decoration:none;
+vertical-align: middle;
+
+}
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+
+td a{
+  font-size: 15px;
+}
+
+
+}
+.book_names_img img{
+  float: left;
+  margin: 10px auto 10px auto;
+  width: 50px;
+  height: 100px;
+  padding: 10px 10px;
+}
+
+.book_names span{
+padding-left: 10px;
+height: 25px;
+
+}
+.book_names a{
+font-size: 15px;
+text-decoration:none;
+vertical-align: middle;
+
+}
+
+.extend_further{
+  text-align: right;
+  font-size: 15px;
+  text-decoration: underline;
+
+}
+.list_post img{
+  width:60px;
+  height: 80px;
+  display: inline;
+  vertical-align: middle;
+  padding-left: 50px;
+
+}
+
+.list_post{
+  width: 940px;
+  margin: 10px auto 10px auto;
+	border: 2px solid #000000;
+  background-color: OldLace;
+  border-radius: 25px;
+  color: Teal;
+  float: right;
+  height: auto;
+  font-size: 20px;
+  padding: 5px;
+
+}
+
+.list_post h3{
+
+  background-color: OldLace;
+  color: Teal;
+  text-decoration: underline;
+  font-size: 30px;
+  padding: 5px;
+  margin-left: 30px;
+
+
+}
+
+.list_post a{
+  font-size: 20px;
+  color: Teal;
+  text-align: left;
+}
+
+.post a{
+  color: Teal;
+  font-size: 15px;
+}
+
+.con_info{
+  text-align: left;
+  padding-left:  40px;
+  font-size: 20px;
+}
+
+.return_button a{
+  padding: 5px;
+  color: Bisque;
+  background-color: Teal;
+  text-decoration: none;
+  align: right;
+  text-align: center;
+  clear: both;
+  font-size: 15px;
+  height: 20px;
+  display: inline-block;
+  text-align: left;
+  padding-top: 0px;
+  border-radius: 25px;
+  margin-bottom: 0px;
+  }
+
+  .return_button {
+
+    align: right;
+
+    }
+
+.Book_name {
+  padding: 5px;
+  color: Teal;
+  text-decoration: underline;
+  align: right;
+  font-size: 60px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0px;
+  border-radius: 25px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+}
+
+.star_feedback{
+  background-color: White;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 50px;
+  width: 350px;
+  margin-bottom: 0px;
+}
+
+.Book_name_review{
+  text-decoration: none;
+  font-size: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+input[type=submit] {
+
+  background-color: teal;
+  color: OldLace;
+  border-radius: 25px;
+  font-size: 20px;
+  display: inline;
+}
+
+.Explore_Category_Class{
+  display: inline-block;
+  padding-right: 0px;
+}
+
+button{
+  background-color: Bisque;
+}
+
+.errormessage{
+  color: Red;
+  background-color: Moccasin;
+  width: 500;
+  padding-left: 30px;
+  border-radius: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
+}

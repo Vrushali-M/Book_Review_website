@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+       <!--Overview Information-->
+       <article class="review">
+           <p class = 'return_button'><a href = '/categories'>Go back to categories</a></p>
+           <h4 class = "Book_name"><%= item_data.item_name %></h4>
+           <p class = 'category_list'>Category: <a href = '#' ><%= item_data.catalog_category %></a></p>
+           <div><img src="<%= item_data.get_image_url %>" alt = 'book_image'>
+             <div class ="trial">
+
+               <form action="/myItems" method="POST">
+                 <input type="hidden" name="item_code" value="<%= item_data.item_code %>" />
+                  <input type="hidden" name="item_flag" value="add" />
+                  <input type="submit" value="Add To My List" />
+                </form>
+                <form id="UpdateButton" action='/feedback' method="post">
+                         <input type="hidden" name="item_code" value="<%= item_data.item_code %>" />
+                          <input type="hidden" name="item_flag" value="update" />
+                         <input type="submit" value="Review It" />
+                       </form>
+            <!--Star Rating Information-->
+             <p></p>
+               Rating:
+                 <% var star_rating = item_data.rating %>
+                 <% var full_stars = (Math.floor(star_rating)); %>
+                 <% var empty_star = Math.floor(5-full_stars); %>
+                 
+                 <% for(var i=0; i< full_stars; i++){ %>
+                      <span class="fa fa-star"></span>
+                         <% } %>
+
+                  <% for(var k=0; k< empty_star; k++){ %>
+                       <span class="fa fa-star-o"></span>
+                  <% } %>
+                </div>
+              </div>
+
+           <h3>Summary:</h3>
+           <h6 class = 'summary'><%= item_data.description %></h6>
+
+       </article>
+     </main>
+     <% include partials/site-navigation.ejs %>
+     <% include partials/footer.ejs %>
+   </div>
+
+ </body>

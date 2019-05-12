@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+
+      <!--Overview Information-->
+
+      <article class="post">
+        <%if(typeof(error) != 'undefined'){%>
+        <div class = "errormessage">
+        <p>Please give Valid Inputs</p>
+        <p>Either username or password is incorrect</p>
+        <p>Please try again</p>
+        </div>
+        <%}%>
+        <h1 class = "subheaders">Sign In</h1>
+        <form action="/" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        <label>Email</label></td>
+                    <td>
+                        <input type="email" name="email" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password</label></td>
+                    <td>
+                        <input type="password" name="password" size="40" />
+                    </td>
+                </tr>
+
+
+            </table>
+
+            <input type="submit" value="Sign In" />
+
+        </form>
+
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>

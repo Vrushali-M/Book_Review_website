@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+
+      <!--Overview Information-->
+      <article class="post">
+        <h1 class = "subheaders">About Us</h1>
+           <p>We hope that you are enjoying this site. Keep track of your books, make new friends, Never lose the bibliophile in you.</p>
+           <p></p>
+            <p class="con_info"> Found in 2001, we are an independent nonprofit organization dedicated to helping people thrive in a world of media and technology.
+              We offer the largest, most trusted library of independent age-based and educational ratings and reviews for books.   </p>
+              <p></p>
+            <p>Let us know if there is something on this page that should be changed. Or if something needs to be improved, or if you are just dying to share a secret with us. </p>
+            <p class="con_info"> # Phone: 1234567890</p>
+            <p class="con_info"> # Mail: abcdef@aob.com</p>
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../controller/set_action.js"></script>
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+      <!--Overview Information-->
+      <article class="post">
+        <h1 class = "subheaders">My Books</h1>
+
+        <table>
+            <tr>
+              <th>BOOK IMAGE</th>
+              <th>BOOK</th>
+              <th>CATEGORY</th>
+            <th>MY RATING</th>
+            <th>RATING</th>
+            <th>UPDATE</th>
+          <th>DELETE</th>
+          <th>READ IT</th>
+        </tr>
+        <%for (val in item_data) {%>
+          <%if (typeof(item_data[val]) !== 'undefined') {%>
+        <tr>
+          <td><img src=<%=item_data[val]['get_image_url']%> alt="book_cover"/></td>
+
+          <td><%=item_data[val]['item_name']%></td>
+
+              <td><%=item_data[val]['catalog_category']%></td>
+
+              <!--User Rating Star Information-->
+
+              <td><% var star_rating = parseInt(item_data[val]['my_rating']) %>
+              <% var full_stars = (Math.floor(star_rating)); %>
+              <% var empty_star = Math.floor(5-full_stars); %>
+
+              <% for(var i=0; i< full_stars; i++){ %>
+                   <span class="fa fa-star"></span>
+                      <% } %>
+
+               <% for(var k=0; k< empty_star; k++){ %>
+                    <span class="fa fa-star-o"></span>
+               <% } }%></td>
+
+                 <!--Rating Star Information-->
+               <td><% var star_rating = item_data[val]['rating'] %>
+               <% var full_stars = (Math.floor(star_rating)); %>
+               <% var empty_star = Math.floor(5-full_stars); %>
+
+               <% for(var i=0; i< full_stars; i++){ %>
+                    <span class="fa fa-star"></span>
+                       <% } %>
+
+                <% for(var k=0; k< empty_star; k++){ %>
+                     <span class="fa fa-star-o"></span>
+                <% } %></td>
+              <td>  <form id="UpdateButton" action='/feedback' method="post">
+                      	 <input type="hidden" name="item_code" value="<%= item_data[val]['item_code'] %>" />
+                         <input type="hidden" name="item_flag" value="update" />
+                      	 <input type="submit" value="Update" />
+                      </form>
+                    </td>
+                    <td>
+                      <form id="DeleteButton" action='/myItems' method="post">
+                          	 <input type="hidden" name="item_code" value="<%= item_data[val]['item_code'] %>" />
+                             <input type="hidden" name="item_flag" value="delete" />
+                          	 <input type="submit" value="Delete" />
+                      </form> </td>
+                    <td><%=item_data[val]['read_it']%></td>
+
+                  </tr>
+                  <%}%>
+                </table>
+          <br>
+          <br>
+          <p><a href="/categories">Click here to share new reviews</a></p>
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>

@@ -1,0 +1,15 @@
+<!--Heading-->
+      <article>
+        <header class = 'top_heading'>
+
+          <img src="../assets/images/logo2.png" alt="logo" />
+
+          <%if (typeof(sess)=='undefined'){var user_name = "Not Signed In"} else{var user_name = "Hello "+ sess}%>
+
+            <p class = "sign_in_status"><%=user_name%></p>
+
+
+          <h1>ALL ABOUT BOOKS</h1>
+          <h3>" You know you have read a good book, when you turn the page and feel as if you have lost a friend "</h3>
+        </header>
+      </article>

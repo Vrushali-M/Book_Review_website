@@ -1,0 +1,14 @@
+<!--Navigation bar Information-->
+
+<nav class="nav_bar">
+
+  <%if (typeof(sess)=='undefined'){var menu_item = " Sign In"; } else{var menu_item = " Sign Out"; }%>
+
+  <a href="/login"><i class="fa fa-user-circle-o"><%=menu_item%></i></a>
+  <a class='active' href="/myItems"><i class="fa fa-book"> My Books</i></a>
+  <form action="/categories" method="POST" class = "Explore_Category_Class">
+      <input type="text" name="category_search" class = "category_search" />
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+</nav>

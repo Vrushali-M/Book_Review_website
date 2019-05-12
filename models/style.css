@@ -1,0 +1,10 @@
+.main{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+table{background: #2E4CF3; color: #FFFFFF;}
+.student{ width: 40%;position: fixed; align-content: center;
+}
+table tr td{text-align: center; background: lightblue; color: #2E4CF3;
+}

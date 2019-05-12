@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+
+      <!--Overview Information-->
+      <article class="list_post">
+        <h2 class = "subheaders">Categories</h2>
+
+           <% for(var i=0; i< category_names.length; i++){%>
+          <h3><%= category_names[i] %></h3>
+
+             <% for(var k=0; k< category_items.length; k++){%>
+		         <%if (category_items[k].catalog_category == category_names[i] || category_items[k].item_name == category_names[i]){%>
+
+            <p class = 'book_names'><a href = "<%= '/categories/item?item_code=' +  category_items[k].item_code %>"><img src=<%=category_items[k].get_image_url %> alt="book_cover"/> <%= category_items[k].item_name %> (Rating: <%= category_items[k].rating %>)</a></p>
+          <%}} }%>
+        <hr>
+      </article>
+
+
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>

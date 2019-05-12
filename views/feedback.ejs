@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+       <!--Overview Information-->
+       <article class="review">
+         <p class = 'return_button'><a href = '/categories'>Go back to categories</a></p>
+         <h6 class = "Book_name_review"><%=item_data[0].item_name%></h6>
+         <p class = 'category_list'>Category: <a href = '#' ><%=item_data[0].catalog_category%></a>| <a href="#" > Top Rated</a></p>
+
+         <div><img src=<%=image_url%> alt = 'book_image'>
+           <p class ="feedback_rating">
+             Rating:
+
+            <form id="tableForm" action='/myItems' method="post">
+                <input type="hidden" name="itemCode" value="<%= item_data[0].item_code %>" />
+                <input type="hidden" name="item_flag" value="rate" />
+
+              <!--Stars Rating Button-->
+                <select class="selectpicker" data-style="btn-info" name="selectpicker_1">
+                    <optgroup label="Ratings">
+                        <option value="">0</option>
+                        <% rows=[1,2,3,4,5] %>
+                        <% rows.forEach(function(row){ %>
+                        <option value="<%= row %>"><%= row %></option>
+                        <% }) %>
+                    </optgroup>
+                </select>
+                <!--Read It rating Button-->
+
+                <select class="selectpicker" data-style="btn-info" name="selectpicker_2">
+                    <optgroup label="Read">
+                        <option value="">No</option>
+                        <% rows=["yes"] %>
+                        <% rows.forEach(function(row){ %>
+                        <option value="<%= row %>"><%= row %></option>
+                        <% }) %>
+                    </optgroup>
+                </select>
+              <input type="submit" value="Submit" />
+        </form>
+
+         </div>
+        <p></p>
+       </article>
+     </main>
+     <% include partials/site-navigation.ejs %>
+     <% include partials/footer.ejs %>
+   </div>
+
+ </body>

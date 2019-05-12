@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--Header Information-->
+<head>
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>All about Books</title>
+</head>
+
+ <!--Page Start-->
+<body>
+   <!--Putting it in container-->
+  <div class="div_element">
+ <!--Main part of page-->
+    <main>
+      <% include partials/header.ejs %>
+      <% include partials/user-navigation.ejs %>
+
+      <!--Overview Information-->
+      <article class="post">
+        <h1 class = "subheaders">Error Page</h1>
+           <p>ERROR 404</p>
+           <p></p>
+            <p> The requested page is not found </p>
+
+            <p><a href = '/'> Go back to Home Page</a></p>
+            <p><a href = '/categories'> Go back to browse categories</a></p>
+        </article>
+    </main>
+    <% include partials/site-navigation.ejs %>
+    <% include partials/footer.ejs %>
+
+  </div>
+
+</body>
