@@ -1,0 +1,149 @@
+use all_about_books
+
+db.createCollection('items')
+db.createCollection('userItem')
+db.createCollection('user')
+
+db.items.insert([
+  {"item_code":"01",
+    "item_name":"1984",
+    "catalog_category":"Classic",
+    "description":"Nineteen Eighty-Four, often published as 1984, is a dystopian novel by English writer George Orwell published in June 1949.[2][3] The novel is set in the year 1984 when most of the world population have become victims of perpetual war, omnipresent government surveillance and propaganda.",
+    "rating":"4"
+  },
+
+  {"item_code":"02",
+    "item_name":"Alice in Wonderland",
+    "catalog_category":"Children",
+    "description":"Alice's Adventures in Wonderland (commonly shortened to Alice in Wonderland) is an 1865 novel written by English author Charles Lutwidge Dodgson under the pseudonym Lewis Carroll.[1] It tells of a young girl named Alice falling through a rabbit hole into a fantasy world populated by peculiar, anthropomorphic creatures. The tale plays with logic, giving the story lasting popularity with adults as well as with children.[2] It is considered to be one of the best examples of the literary nonsense genre.[2][3] Its narrative course, structure, characters, and imagery have been enormously influential[3] in both popular culture and literature, especially in the fantasy genre.",
+    "rating":"3"
+  },
+
+  {"item_code":"03",
+    "item_name":"The Alchemist",
+    "catalog_category":"Classic",
+    "description":"The Alchemist is a novel by Brazilian author Paulo Coelho that was first published in 1988. Originally written in Portuguese, it became a widely translated international bestseller.",
+    "rating":"3"
+  },
+
+  {"item_code":"04",
+    "item_name":"Catch 22",
+    "catalog_category":"Classic",
+    "description":"Catch-22 is a satirical novel by American author Joseph Heller. He began writing it in 1953; the novel was first published in 1961.Often cited as one of the most significant novels of the twentieth century,[2] it uses a distinctive non-chronological third-person omniscient narration, describing events from the points of view of different characters. The separate storylines are out of sequence so the timeline develops along with the plot.",
+    "rating":"4"
+  },
+
+  {"item_code":"05",
+    "item_name":"Charlotte's Web",
+    "catalog_category":"Children",
+    "description":"Charlotte's Web is a children's novel by American author E. B. White and illustrated by Garth Williams; it was published on October 15, 1952, by Harper & Brothers. The novel tells the story of a livestock pig named Wilbur and his friendship with a barn spider named Charlotte. When Wilbur is in danger of being slaughtered by the farmer, Charlotte writes messages praising Wilbur  in her web in order to persuade the farmer to let him live.Written in White's dry, low-key manner, Charlotte's Web is considered a classic of children's literature, enjoyable to adults as well as children. The description of the experience of swinging on rope swing at the farm is an often cited example of rhythm in writing, as the pace of the sentences reflects the motion of the swing. In 2000, Publishers Weekly listed the book as the best-selling children's paperback of all time.[1]",
+    "rating":"3"
+  },
+  {"item_code":"06",
+    "item_name":"Eragon",
+    "catalog_category":"Fantasy",
+    "description":"Eragon is the first book in the Inheritance Cycle by Christopher Paolini. Paolini, born in 1983, wrote the novel while still in his teens. After writing the first draft for a year, Paolini spent a second year rewriting and fleshing out the story and characters. His parents saw the final manuscript and in 2001 decided to self-publish Eragon;[1] Paolini spent a year traveling around the United States promoting the novel. By chance, the book was discovered by Carl Hiaasen, who got it re-published by Alfred A. Knopf. The re-published version was released on August 26, 2003.",
+    "rating":"3"
+  },
+  {"item_code":"07",
+    "item_name":"Famous Five",
+    "catalog_category":"Children",
+    "description":"The Famous Five is a series of children's adventure novels written by English author Enid Blyton. The first book, Five on a Treasure Island, was published in 1942. The novels feature the adventures of a group of young children – Julian, Dick, Anne and Georgina (George) – and their dog Timmy.",
+    "rating":"3"
+  },
+  {"item_code":"08",
+    "item_name":"Harry Potter: and the Goblet of Fire",
+    "catalog_category":"Fantasy",
+    "description":"Harry Potter and the Goblet of Fire is a 2005 fantasy film directed by Mike Newell and distributed by Warner Bros.Pictures.[4] It is based on J. K. Rowling's 2000 novel of the same name. The film, which is the fourth instalment in the Harry Potter film series, was written by Steve Kloves and produced by David Heyman. The story follows Harry's fourth year at Hogwarts as he is chosen by the Goblet of Fire to compete in the Triwizard Tournament.",
+    "rating":"4"
+
+  },
+  {"item_code":"09",
+    "item_name":"Hitchhiker's Guide to the Galaxy",
+    "catalog_category":"Fantasy",
+    "description":"The Hitchhiker's Guide to the Galaxy is a fictional electronic guide book in the multimedia scifi/comedy series of the same name by Douglas Adams. The Guide serves as  . Entries from the guidebook are used as comic narration to bridge events and provide background information in every version of the story. The guide is published by a publishing company on Ursa Minor Beta.",
+    "rating":"4"
+
+  },
+  {"item_code":"10",
+    "item_name":"IT",
+    "catalog_category":"Horror",
+    "description":"It is a 1986 horror novel by American author Stephen King. It was his 22nd book, and his 18th novel written under his own name. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears and phobias of its victims to disguise itself while hunting its prey. The book primarily appears in the form of 'Pennywise the Dancing Clown' to attract its preferred prey of young children.",
+    "rating":"3"
+  }
+
+])
+
+
+db.userItem.insert([{"user_id":"01","item_code":"07","my_rating":2,"read_it":"No","is_deleted":false},
+  {"user_id":"01","item_code":"09","my_rating":3,"read_it":"Yes","is_deleted":false},
+  {"user_id":"02","item_code":"03","my_rating":4,"read_it":"Yes","is_deleted":false},
+  {"user_id":"03","item_code":"02","my_rating":5,"read_it":"No","is_deleted":false},
+  {"user_id":"02","item_code":"06","my_rating":3,"read_it":"Yes","is_deleted":false},
+  {"user_id":"03","item_code":"07","my_rating":4,"read_it":"Yes","is_deleted":false},
+  {"user_id":"04","item_code":"05","my_rating":1,"read_it":"No","is_deleted":false}])
+  
+
+db.user.insert(
+[
+  {
+    "user_id": "01",
+    "first_name":"John",
+    "last_name":"Doe",
+    "email_id": "johndoe@gmail.com",
+    "password": "54zxcv63",
+    "add_line_1":"10 High Street",
+    "add_line_2": "Peidmont Avenue Apt 5",
+    "city": "Charleston",
+    "state":"NC",
+    "zip_code":"805054",
+    "country": "US",
+    "phone":"0012254789"
+  },
+
+  {
+    "user_id": "02",
+    "first_name":"Jane",
+    "last_name":"Burton",
+    "email_id": "burton_j@gmail.com",
+    "password": "password",
+    "add_line_1":"15 Sesame Street",
+    "add_line_2": "House 456",
+    "city": "Langley",
+    "state":"Utah",
+    "zip_code":"565423",
+    "country": "US",
+    "phone": "8795641230"
+  },
+  {
+    "user_id": "03",
+    "first_name":"Harry",
+    "last_name":"Potter",
+    "email_id": "thechosenone@gmail.com",
+    "password": "12hp34",
+    "add_line_1":"Cupboard under the stairs",
+    "add_line_2": "Private Drive",
+    "city": "Miami",
+    "state":"CA",
+    "zip_code":"879510",
+    "country": "US",
+    "phone":"111222333"
+  },
+
+  {
+    "user_id": "04",
+    "first_name":"Ron",
+    "last_name":"Weasely",
+    "email_id": "rweasely10@gmail.com",
+    "password": "rw789",
+    "add_line_1":"The Burrow",
+    "add_line_2": "House 1479",
+    "city": "Red City",
+    "state":"Ohio",
+    "zip_code":"879654",
+    "country": "US",
+    "phone": "7894561230"
+  }
+]
+)
+
